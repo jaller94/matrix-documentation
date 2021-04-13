@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Home and License</a></li><li class="chapter-item expanded affix "><a href="Frequently-Asked-Questions.html">Frequently Asked Questions</a></li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html"><strong aria-hidden="true">1.</strong> Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html"><strong aria-hidden="true">2.</strong> Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html"><strong aria-hidden="true">3.</strong> Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html"><strong aria-hidden="true">4.</strong> Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html"><strong aria-hidden="true">5.</strong> Submit Debug Logs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html"><strong aria-hidden="true">5.1.</strong> Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html"><strong aria-hidden="true">5.2.</strong> Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html"><strong aria-hidden="true">5.3.</strong> Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html" class="active"><strong aria-hidden="true">5.4.</strong> Reset Cross Signing</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Home and License</a></li><li class="chapter-item expanded "><a href="Frequently-Asked-Questions.html"><strong aria-hidden="true">2.</strong> Frequently Asked Questions</a></li><li class="chapter-item expanded affix "><li class="part-title">Element</li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html"><strong aria-hidden="true">3.</strong> Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html"><strong aria-hidden="true">4.</strong> Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html"><strong aria-hidden="true">5.</strong> Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html"><strong aria-hidden="true">6.</strong> Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html"><strong aria-hidden="true">7.</strong> Submit Debug Logs</a></li><li class="chapter-item expanded affix "><li class="part-title">Cross Signing</li><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html"><strong aria-hidden="true">8.</strong> Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html"><strong aria-hidden="true">9.</strong> Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html"><strong aria-hidden="true">10.</strong> Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html" class="active"><strong aria-hidden="true">11.</strong> Reset Cross Signing</a></li><li class="chapter-item expanded affix "><li class="part-title">Element Matrix Services</li><li class="chapter-item expanded "><a href="Add-Additional-Users.html"><strong aria-hidden="true">12.</strong> Add Additional Users</a></li><li class="chapter-item expanded "><a href="Add-Users.html"><strong aria-hidden="true">13.</strong> Add Users</a></li><li class="chapter-item expanded "><a href="Client-Look-and-Feel.html"><strong aria-hidden="true">14.</strong> Client Look &amp; Feel</a></li><li class="chapter-item expanded "><a href="EMS-Server-With-Custom-Domain.html"><strong aria-hidden="true">15.</strong> EMS Server With Custom Domain</a></li><li class="chapter-item expanded "><a href="Get-Your-Own-EMS-Server.html"><strong aria-hidden="true">16.</strong> Get Your Own EMS Server</a></li><li class="chapter-item expanded "><a href="Reset-User-Password.html"><strong aria-hidden="true">17.</strong> Reset User Password</a></li><li class="chapter-item expanded affix "><li class="part-title">Contribute</li><li class="chapter-item expanded "><a href="Contribute.html"><strong aria-hidden="true">18.</strong> Contribute</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -163,7 +163,74 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="reset-cross-signing"><a class="header" href="#reset-cross-signing">Reset Cross Signing</a></h1>
+                        <h1 id="reset-cross-signing----omit-in-toc---"><a class="header" href="#reset-cross-signing----omit-in-toc---">Reset Cross Signing <!-- omit in toc --></a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<p>Only do this if you have forgotten or lost your cross signing backup passphrase.</p>
+<p>Please read through the entire document before starting to make sure you understand the consequences of doing this.</p>
+<ul>
+<li><strong><a href="#if-you-have-an-active-session">If you have an active session</a></strong></li>
+<li><strong><a href="#if-you-do-not-have-an-active-session">If you DO NOT have an active session</a></strong></li>
+</ul>
+<h2 id="if-you-have-an-active-session"><a class="header" href="#if-you-have-an-active-session">If you have an active session</a></h2>
+<ol>
+<li>
+<p>You may wish to backup your keys before doing this just to be on the safe side if something goes wrong: See <a href="Export-And-Import-E2E-Room-Keys.html">Export-And-Import-E2E-Room-Keys</a></p>
+</li>
+<li>
+<p>Go to Element <code>Security &amp; Privacy</code> settings<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.02.07%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Reset cross-signing and secret storage</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.05.05%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Clear cross-signing keys</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.06.18%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Generate a Security Key</code> or <code>Enter a Security Phrase</code>. Then <code>Continue</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.06.50%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Take note of your key then click <code>Continue</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.07.52%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Enter your account password and click <code>Continue</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.09.47%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>You can delete any untrusted sessions in Element <code>Security &amp; Privacy</code> settings. Select the sessions you want to remove and click <code>Delete 1 session</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.14.55%20PM.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="if-you-do-not-have-an-active-session"><a class="header" href="#if-you-do-not-have-an-active-session">If you DO NOT have an active session</a></h2>
+<p>Doing this will destroy all your keys and you will NOT be able to access any historical encrypted messages.</p>
+<ol>
+<li>
+<p>Log in to Element<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.59.21%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Skip</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.00.40%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Skip</code> again<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.01.08%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Do not connect to Key Backup or verify session when asked</p>
+</li>
+<li>
+<p>Note that you will not be able to decrypt any previous messages after doing this<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%203.12.36%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Follow the steps from <a href="#if-you-have-an-active-session">If you have an active session</a></p>
+</li>
+</ol>
 
                     </main>
 
@@ -175,6 +242,10 @@
                             </a>
                         
 
+                        
+                            <a rel="next" href="Add-Additional-Users.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -189,6 +260,10 @@
                     </a>
                 
 
+                
+                    <a rel="next" href="Add-Additional-Users.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
