@@ -1439,7 +1439,175 @@ chat.twily.org                 CNAME  299   Answer     ems-custom-demo-staging.e
 <img src="images/Screen%20Shot%202020-07-30%20at%202.47.25%20PM.png" alt="" /></p>
 </li>
 </ol>
-<h1 id="migrate-from-self-hosted-to-ems"><a class="header" href="#migrate-from-self-hosted-to-ems">Migrate From Self-Hosted to EMS</a></h1>
+<h1 id="migrate-from-self-hosted-to-ems----omit-in-toc---"><a class="header" href="#migrate-from-self-hosted-to-ems----omit-in-toc---">Migrate From Self Hosted to EMS <!-- omit in toc --></a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<h2 id="table-of-contents----omit-in-toc---"><a class="header" href="#table-of-contents----omit-in-toc---">Table of Contents <!-- omit in toc --></a></h2>
+<!-- TOC -->
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#notes">Notes</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#ssh-to-your-matrix-server">SSH to your matrix server</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#generate-password-for-gpg-encryption">Generate password for gpg encryption</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#gpg">GPG</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#create-a-folder-to-store-everything">Create a folder to store everything</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#set-restrictive-permissions-on-the-folder">Set restrictive permissions on the folder</a></li>
+</ul>
+</li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#copy-synapse-config">Copy Synapse config</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#stop-synapse">Stop Synapse</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#database-export">Database export</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#postgresql">PostgreSQL</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#dump-compress-and-encrypt">Dump, compress and encrypt</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#if-required-split-into-smaller-files">If required, split into smaller files</a></li>
+</ul>
+</li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#sqlite">SQLIte</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#compress-and-encrypt">Compress and encrypt</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#if-required-split-into-smaller-files-1">If required, split into smaller files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#media-export">Media export</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#if-you-are-using-sqlite-as-database">If you are using SQLIte as database</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#download-the-export-tool">Download the export tool</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#run-the-export">Run the export</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#compress-and-encrypt-1">Compress and encrypt</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#if-required-split-into-smaller-files-2">If required, split into smaller files</a></li>
+</ul>
+</li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#backup-media-export">Backup media export</a>
+<ul>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#compress-and-encrypt-2">Compress and encrypt</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#if-required-split-into-smaller-files-3">If required, split into smaller files</a></li>
+</ul>
+</li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#transfer">Transfer</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#cleanup">Cleanup</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<ul>
+<li>Except where specified, you should be able to just copy-paste each command in succession</li>
+<li>Please do not change any file names anywhere</li>
+</ul>
+<h2 id="ssh-to-your-matrix-server"><a class="header" href="#ssh-to-your-matrix-server">SSH to your matrix server</a></h2>
+<p>You might want to run everything in a <code>tmux</code> or <code>screen</code> session to avoid disruption in case of lost SSH connection</p>
+<h2 id="generate-password-for-gpg-encryption"><a class="header" href="#generate-password-for-gpg-encryption">Generate password for gpg encryption</a></h2>
+<pre><code class="language-bash">pwgen -s 64 1
+</code></pre>
+<p>Alternately, you can use our GPG key. Note, this expires on 2022-04-22, if this is soon, please talk to your EMS contact.<br />
+<a href="ems-support-public.pgp">ems-support-public.pgp</a></p>
+<h2 id="gpg"><a class="header" href="#gpg">GPG</a></h2>
+<p>If <code>gpg</code> is being uncooperative, use the command <code>gpgconf --kill gpg-agent</code></p>
+<h2 id="create-a-folder-to-store-everything"><a class="header" href="#create-a-folder-to-store-everything">Create a folder to store everything</a></h2>
+<pre><code class="language-bash">mkdir -p /tmp/synapse_export
+cd /tmp/synapse_export
+</code></pre>
+<p>The guide from here on assumes your current working directory is <code>/tmp/synapse_export</code></p>
+<h3 id="set-restrictive-permissions-on-the-folder"><a class="header" href="#set-restrictive-permissions-on-the-folder">Set restrictive permissions on the folder</a></h3>
+<p>If you are working as root: (otherwise set restrictive permissions as needed)</p>
+<pre><code class="language-bash">chmod 000 /tmp/synapse_export
+</code></pre>
+<h2 id="copy-synapse-config"><a class="header" href="#copy-synapse-config">Copy Synapse config</a></h2>
+<p>Copy the following files and send to EMS Support</p>
+<ul>
+<li>Your Synapse configuration file (usually <code>homeserver.yaml</code>)</li>
+<li>Your message signing key.
+<ul>
+<li>This is stored in a separate file. See the Synapse config file for the path. The variable is <code>signing_key_path</code> <a href="https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528">https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="stop-synapse"><a class="header" href="#stop-synapse">Stop Synapse</a></h2>
+<p><strong>DO NOT START IT AGAIN AFTER THIS</strong></p>
+<h2 id="database-export"><a class="header" href="#database-export">Database export</a></h2>
+<h3 id="postgresql"><a class="header" href="#postgresql">PostgreSQL</a></h3>
+<h4 id="dump-compress-and-encrypt"><a class="header" href="#dump-compress-and-encrypt">Dump, compress and encrypt</a></h4>
+<p>Replace</p>
+<ul>
+<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
+<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
+<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
+</ul>
+<pre><code class="language-bash">pg_dump -O -h &lt;dbhost&gt; -U &lt;dbusername&gt; -d &lt;dbname&gt; | gzip &gt; customer_db_export.sql.gz
+gpg --symmetric --no-symkey-cache customer_db_export.sql.gz
+rm customer_db_export.sql.gz
+</code></pre>
+<h4 id="if-required-split-into-smaller-files"><a class="header" href="#if-required-split-into-smaller-files">If required, split into smaller files</a></h4>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_db_export.sql.gz.gpg customer_db_export.sql.gz.gpg.part-
+rm customer_db_export.sql.gz.gpg
+</code></pre>
+<h3 id="sqlite"><a class="header" href="#sqlite">SQLIte</a></h3>
+<h4 id="compress-and-encrypt"><a class="header" href="#compress-and-encrypt">Compress and encrypt</a></h4>
+<pre><code class="language-bash">tar -zcvf homeserver.db.tar.gz /path/to/homeserver.db
+gpg --symmetric --no-symkey-cache homeserver.db.tar.gz
+rm homeserver.db.tar.gz
+</code></pre>
+<h4 id="if-required-split-into-smaller-files-1"><a class="header" href="#if-required-split-into-smaller-files-1">If required, split into smaller files</a></h4>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m homeserver.db.tar.gz homeserver.db.tar.gz.part-
+rm homeserver.db.tar.gz
+</code></pre>
+<h2 id="media-export"><a class="header" href="#media-export">Media export</a></h2>
+<h3 id="if-you-are-using-sqlite-as-database"><a class="header" href="#if-you-are-using-sqlite-as-database">If you are using SQLIte as database</a></h3>
+<p>Skip ahead to and follow <a href="Migrate-From-Self-Hosted-to-EMS.html#backup-media-export">Backup media export</a></p>
+<h3 id="download-the-export-tool"><a class="header" href="#download-the-export-tool">Download the export tool</a></h3>
+<p>Download the latest version of <code>export_synapse_for_import-linux-x64</code> (or <code> export_synapse_for_import-win-x64.exe</code>) from <a href="https://github.com/turt2live/matrix-media-repo/releases">https://github.com/turt2live/matrix-media-repo/releases</a></p>
+<pre><code class="language-bash">wget https://github.com/turt2live/matrix-media-repo/releases/download/vx.x.x/export_synapse_for_import-linux-x64
+chmod +x export_synapse_for_import-linux-x64
+</code></pre>
+<h3 id="run-the-export"><a class="header" href="#run-the-export">Run the export</a></h3>
+<p>Replace</p>
+<ul>
+<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
+<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
+<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
+<li><code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</li>
+<li><code>&lt;yourdomain.tld&gt;</code> (the domain for your server. this is the part that is in your usernames)</li>
+</ul>
+<pre><code class="language-bash">./export_synapse_for_import-linux-x64 -h
+./export_synapse_for_import-linux-x64 -dbHost &lt;dbhost&gt; -dbPort 5432 -dbName &lt;dbname&gt; -dbUsername &lt;dbusername&gt; -mediaDirectory /path/to/synapse/media_store -serverName &lt;yourdomain.tld&gt; -destination ./customer_media_export
+mv logs customer_media_export
+mv media-repo.yaml customer_media_export
+rm export_synapse_for_import-linux-x64
+</code></pre>
+<h3 id="compress-and-encrypt-1"><a class="header" href="#compress-and-encrypt-1">Compress and encrypt</a></h3>
+<pre><code class="language-bash">tar -zcvf customer_media_export.tar.gz customer_media_export
+gpg --symmetric --no-symkey-cache customer_media_export.tar.gz
+rm customer_media_export.tar.gz
+rm -r customer_media_export
+</code></pre>
+<h3 id="if-required-split-into-smaller-files-2"><a class="header" href="#if-required-split-into-smaller-files-2">If required, split into smaller files</a></h3>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_media_export.tar.gz.gpg customer_media_export.tar.gz.gpg.part-
+rm customer_media_export.tar.gz.gpg
+</code></pre>
+<h2 id="backup-media-export"><a class="header" href="#backup-media-export">Backup media export</a></h2>
+<h3 id="compress-and-encrypt-2"><a class="header" href="#compress-and-encrypt-2">Compress and encrypt</a></h3>
+<p>Replace * <code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</p>
+<pre><code class="language-bash">tar -zcvf customer_backup_media_export.tar.gz /path/to/synapse/media_store
+gpg --symmetric --no-symkey-cache customer_backup_media_export.tar.gz
+rm customer_backup_media_export.tar.gz
+</code></pre>
+<h3 id="if-required-split-into-smaller-files-3"><a class="header" href="#if-required-split-into-smaller-files-3">If required, split into smaller files</a></h3>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_backup_media_export.tar.gz.gpg customer_backup_media_export.tar.gz.gpg.part-
+rm customer_backup_media_export.tar.gz.gpg
+</code></pre>
+<h2 id="transfer"><a class="header" href="#transfer">Transfer</a></h2>
+<p>Download the files, then upload to the Google Drive folder shared by EMS or a location as agreed with your EMS contact.</p>
+<p>While transfer is running, you should edit or create the well-known files and CNAME DNS records to point to your EMS host</p>
+<p>On your local computer</p>
+<pre><code class="language-bash">scp -r -P 1234 -i ~/.ssh/matrix-server youruser@1.2.3.4:/tmp/synapse_export /some/local/folder
+</code></pre>
+<h2 id="cleanup"><a class="header" href="#cleanup">Cleanup</a></h2>
+<p>We strongly recommend that you leave the export and Synapse untouched until the import is finished and everything is verified working</p>
 <h1 id="contribute"><a class="header" href="#contribute">Contribute</a></h1>
 <ol>
 <li>Fork the <a href="https://github.com/Twi1ightSparkle/matrix-documentation">GitHib repo</a></li>
