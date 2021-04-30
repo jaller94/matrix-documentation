@@ -1488,6 +1488,7 @@ chat.twily.org                 CNAME  299   Answer     ems-custom-demo-staging.e
 </li>
 <li><a href="Migrate-From-Self-Hosted-to-EMS.html#transfer">Transfer</a></li>
 <li><a href="Migrate-From-Self-Hosted-to-EMS.html#cleanup">Cleanup</a></li>
+<li><a href="Migrate-From-Self-Hosted-to-EMS.html#note-on-users-and-element">Note on users and Element</a></li>
 </ul>
 <!-- /TOC -->
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
@@ -1608,6 +1609,8 @@ rm customer_backup_media_export.tar.gz.gpg
 </code></pre>
 <h2 id="cleanup"><a class="header" href="#cleanup">Cleanup</a></h2>
 <p>We strongly recommend that you leave the export and Synapse untouched until the import is finished and everything is verified working</p>
+<h2 id="note-on-users-and-element"><a class="header" href="#note-on-users-and-element">Note on users and Element</a></h2>
+<p>Element does have support for changing the delegated homeserver URL. All your users will have to sign out and sign in again to Element. You should ensure everyone have Key Backup set configurd and working.</p>
 <h1 id="contribute"><a class="header" href="#contribute">Contribute</a></h1>
 <ol>
 <li>Fork the <a href="https://github.com/Twi1ightSparkle/matrix-documentation">GitHib repo</a></li>
