@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>Element Wiki</title>
         
         <meta name="robots" content="noindex" />
         
@@ -15,7 +15,7 @@
 
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
+        <meta name="description" content="Guides for EMS, Element, and Matrix by the EMS team">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -103,7 +103,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Element Wiki</a></li><li class="chapter-item expanded affix "><a href="Frequently-Asked-Questions.html">Frequently Asked Questions</a></li><li class="chapter-item expanded affix "><li class="part-title">Element</li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html">Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html">Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html">Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html">Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html">Submit Debug Logs</a></li><li class="chapter-item expanded affix "><li class="part-title">Cross Signing</li><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html">Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html">Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html">Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html">Reset Cross Signing</a></li><li class="chapter-item expanded affix "><li class="part-title">Element Matrix Services</li><li class="chapter-item expanded "><a href="Add-Additional-Users.html">Add Additional Users</a></li><li class="chapter-item expanded "><a href="Add-Users.html">Add Users</a></li><li class="chapter-item expanded "><a href="Client-Look-and-Feel.html">Client Look &amp; Feel</a></li><li class="chapter-item expanded "><a href="EMS-Server-With-Custom-Domain.html">EMS Server With Custom Domain</a></li><li class="chapter-item expanded "><a href="Get-Your-Own-EMS-Server.html">Get Your Own EMS Server</a></li><li class="chapter-item expanded "><a href="Reset-User-Password.html">Reset User Password</a></li><li class="chapter-item expanded "><a href="Migrate-From-Self-Hosted-to-EMS.html">Migrate From Self-Hosted to EMS</a></li><li class="chapter-item expanded affix "><li class="part-title">Contribute</li><li class="chapter-item expanded "><a href="Contribute.html">Contribute</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Element Wiki</a></li><li class="chapter-item expanded affix "><a href="Frequently-Asked-Questions.html">Frequently Asked Questions</a></li><li class="chapter-item expanded affix "><li class="part-title">Element Matrix Services</li><li class="chapter-item expanded "><a href="Add-Additional-Users.html">Add Additional Users</a></li><li class="chapter-item expanded "><a href="Add-Users.html">Add Users</a></li><li class="chapter-item expanded "><a href="Client-Look-and-Feel.html">Client Look &amp; Feel</a></li><li class="chapter-item expanded "><a href="EMS-Server-With-Custom-Domain.html">EMS Server With Custom Domain</a></li><li class="chapter-item expanded "><a href="Get-Your-Own-EMS-Server.html">Get Your Own EMS Server</a></li><li class="chapter-item expanded "><a href="Reset-User-Password.html">Reset User Password</a></li><li class="chapter-item expanded "><a href="Migrate-From-Self-Hosted-to-EMS.html">Migrate From Self-Hosted to EMS</a></li><li class="chapter-item expanded affix "><li class="part-title">Element</li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html">Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html">Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html">Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html">Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html">Submit Debug Logs</a></li><li class="chapter-item expanded affix "><li class="part-title">Cross Signing</li><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html">Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html">Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html">Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html">Reset Cross Signing</a></li><li class="chapter-item expanded affix "><li class="part-title">Contribute</li><li class="chapter-item expanded "><a href="Contribute.html">Contribute</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,7 +137,7 @@
                         <img src="book-assets/element-logotype.svg" alt="Element logo" class="header-logo">
                     </div>
 
-                    <h1 class="menu-title"></h1>
+                    <h1 class="menu-title">Element Wiki</h1>
 
                     <div class="right-buttons">
                         
@@ -307,6 +307,501 @@
 <p>We are actively working on improving bridging support for EMS hosts and hope that this will be something that you see substantial improvement in over the coming months.</p>
 <h4 id="online-users-are-displayed-as-offline"><a class="header" href="#online-users-are-displayed-as-offline">Online users are displayed as offline?</a></h4>
 <p>Unfortunately we are not able to offer user presence as a feature at the moment. This is due to potential performance impact and excess resource usage on hosts when this feature is enabled. The Synapse team are aware of this and it is on their road map to address. However, we do not currently have a timeline for when it will be available again.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="add-additional-users"><a class="header" href="#add-additional-users">Add Additional Users</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<ol>
+<li>
+<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
+</li>
+<li>
+<p>Click the <code>Hosts</code> tab</p>
+</li>
+<li>
+<p>Say you want a total of 10 Monthly Active Users on your EMS Nickel server. Add <code>5</code> in the <code>Additional users</code> field. Then click Save
+<img src="images/Screen%20Shot%202020-07-30%20at%202.28.57%20PM.png" alt="" />
+z</p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="add-users"><a class="header" href="#add-users">Add Users</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<ol>
+<li>
+<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
+</li>
+<li>
+<p>Click 'Server Admin'</p>
+</li>
+<li>
+<p>Select your host</p>
+</li>
+<li>
+<p>Click 'Add user'. Enter the username and click <code>Add</code><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.34.01%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Select <code>Make new user server admin</code> if you want this user to be able to use the <a href="https://github.com/matrix-org/synapse/tree/master/docs/admin_api">Synapse Admin API</a> to perform administrative tasks on your server. Be careful with this as this option has a lot of power on your server</p>
+</li>
+<li>
+<p>The username and password for the new user is displayed. You will only be able to see this information once<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.37.05%20PM.png" alt="" /></p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="client-look-and-feel"><a class="header" href="#client-look-and-feel">Client Look and Feel</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<p>This feature allows you fo customize the home and welcome page on your EMS provided Element Web client.</p>
+<p>The guide assumes you already have a website on any domain with https enabled.</p>
+<ol>
+<li>
+<p>Create two files on your web server, for example <a href="https://twily.org/ems_home.html">https://twily.org/ems_home.html</a> and <a href="https://twily.org/ems_welcome.html">https://twily.org/ems_welcome.html</a><br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.01.00%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Edit <code>ems_home.html</code>. This can be as simple as a couple of lines of html, for example</p>
+<pre><code class="language-html">&lt;h1&gt;Demo Company LTD&lt;/h1&gt;
+&lt;h2&gt;Rooms to join&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href='/#/room/#welcome:ems-demo-staging.ems.host'&gt;Welcome to Demo web chat (#welcome)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='/#/room/#support:ems-demo-staging.ems.host'&gt;Support (#support)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='/#/room/#offtopic:ems-demo-staging.ems.host'&gt;Off topic conversation (#offtopic)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Or you can add a more complex html and styling</p>
+</li>
+<li>
+<p>Looks like this in browser:<br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.02.57%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Edit <code>ems_welcome.html</code>. This is a bit more complex, but can be almost anything you want as long as it has links to Login (/#/login) and 'Create account' (/#/register). The default design is based off <a href="https://github.com/vector-im/element-web/blob/master/res/welcome.html">this template</a>. You can get creative with the CSS and the <code>!important</code> tag.</p>
+</li>
+<li>
+<p>Add links to your files on the EMS control panel and click Save.<br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.21.45%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Check that it looks correct and that everything works. You do not need to click save or rebuild in the EMS control panel if you make changes to the files. As long as the URL does not change. Refreshing the Element Web Client page is enough.</p>
+</li>
+<li>
+<p>With some hacking you can make it look as you want. (and this is why I am a developer, not a designer...)<br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.37.18%20AM.png" alt="" /><br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.38.54%20AM.png" alt="" /><br />
+<img src="images/Screen%20Shot%202020-09-15%20at%2011.42.57%20AM.png" alt="" /></p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ems-server-with-custom-domain"><a class="header" href="#ems-server-with-custom-domain">Ems Server With Custom Domain</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<p>For this guide, I will be using the domain <a href="https://twily.org/">twily.org</a>. I will set up EMS so that the Matrix usernames becomes <code>@someone:twily.org</code>, and the Element client will be at <a href="https://chat.twily.org/">https://chat.twily.org/</a></p>
+<p>From the guide at <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a>, I will be replacing the EMS hostname <code>ems-demo-staging.ems.host</code> with <code>ems-custom-demo-staging.ems.host</code></p>
+<p>The guide assumes you already have a website on the root of your domain with https enabled.<br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.06.17%20AM.png" alt="" /></p>
+<ol>
+<li>
+<p>Follow step 1 - 10 from <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a></p>
+</li>
+<li>
+<p>On step 10 from <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a>, turn ON <code>Custom DNS</code><br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.07.59%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>In the <code>Custom Homeserver domain</code> field, enter <code>twily.org</code><br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.08.47%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Create two files on your website according to the instructions given.<br />
+The path cannot be changed, but up to 30 redirects are supported.<br />
+While not required, you should also add the header <code>Content-Type application/json</code> to both files.</p>
+<ol>
+<li>
+<p><code>https://twily.org/.well-known/matrix/server</code><br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.12.39%20AM.png" alt="" /></p>
+<pre><code class="language-json">{
+    &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
+}
+</code></pre>
+</li>
+<li>
+<p><code>https://twily.org/.well-known/matrix/client</code><br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.19.07%20AM.png" alt="" /><br />
+You need to enable the CORS header <code>Access-Control-Allow-Origin: *</code> on the web server for this file. See <a href="https://enable-cors.org/">https://enable-cors.org/</a> for instructions on how to do this.</p>
+<pre><code class="language-json">{
+    &quot;m.homeserver&quot;: {
+        &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
+    },
+    &quot;m.identity_server&quot;: {
+        &quot;base_url&quot;: &quot;https://vector.im&quot;
+    }
+}
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <code>Check again</code> to verify that your <code>.well-known</code> files are configured correctly<br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.22.19%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>You can also verify your <code>.well-known</code> files from the command line. Note the lines <code>access-control-allow-origin: *</code> and <code>content-type: application/json</code></p>
+<ol>
+<li>
+<p>On Mac or Linux, using your <code>terminal</code></p>
+<pre><code>$ curl -i https://twily.org/.well-known/matrix/client
+HTTP/2 200 
+date: Fri, 31 Jul 2020 09:11:21 GMT
+content-type: application/json
+content-length: 129
+set-cookie: __cfduid=x...; expires=Sun, 30-Aug-20 09:11:21 GMT; path=/; domain=.twily.org; HttpOnly; SameSite=Lax
+access-control-allow-origin: *
+cf-cache-status: DYNAMIC
+cf-request-id: 0...
+expect-ct: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+server: cloudflare
+cf-ray: 5...
+
+{
+    &quot;m.homeserver&quot;: {
+        &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
+    },
+    &quot;m.identity_server&quot;: {
+        &quot;base_url&quot;: &quot;https://vector.im&quot;
+    }
+}
+
+$ curl -i https://twily.org/.well-known/matrix/server
+HTTP/2 200 
+date: Fri, 31 Jul 2020 09:11:25 GMT
+content-type: application/json
+content-length: 52
+set-cookie: __cfduid=x...; expires=Sun, 30-Aug-20 09:11:25 GMT; path=/; domain=.twily.org; HttpOnly; SameSite=Lax
+access-control-allow-origin: *
+cf-cache-status: DYNAMIC
+cf-request-id: 0...
+expect-ct: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+server: cloudflare
+cf-ray: 5...
+
+{
+    &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
+}   
+</code></pre>
+</li>
+<li>
+<p>On Windows, using <code>PowerShell</code></p>
+<pre><code>PS C:\Users\twilight&gt; Invoke-WebRequest -Uri https://twily.org/.well-known/matrix/client
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {
+                        &quot;m.homeserver&quot;: {
+                            &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
+                        },
+                        &quot;m.identity_server&quot;: {
+                            &quot;base_url&quot;: &quot;https://vector.im&quot;
+                        }
+                    }
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Access-Control-Allow-Origin: *
+                    CF-Cache-Status: DYNAMIC
+                    cf-request-id: 0...
+                    Expect-CT: max-age=604800, report-uri=&quot;https://repor...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Access-Control-Allow-Origin, *], [CF-Cache-Status, DYNAMIC], [cf-request-id, 0...]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : System.__ComObject
+RawContentLength  : 129
+
+
+PS C:\Users\twilight&gt; Invoke-WebRequest -Uri https://twily.org/.well-known/matrix/server
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {
+                        &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
+                    }
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Access-Control-Allow-Origin: *
+                    CF-Cache-Status: DYNAMIC
+                    cf-request-id: 0...
+                    Expect-CT: max-age=604800, report-uri=&quot;https://repor...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Access-Control-Allow-Origin, *], [CF-Cache-Status, DYNAMIC], [cf-request-id, 0...]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : System.__ComObject
+RawContentLength  : 52
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>You can continue without the <code>.well-known</code> files in place, but your server will have limited functionality until this is fixed</p>
+</li>
+<li>
+<p>In the <code>Custom Client domain</code> field, enter <code>chat.twily.org</code>. This can be any domain, except the same as <code>Custom Homeserver domain</code><br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.26.35%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Create a CNAME DNS record with your DNS provider according to the instructions given<br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.51.37%20AM.png" alt="" /><br />
+<code>chat.twily.org.  CNAME  ems-custom-demo-staging.element.io.</code></p>
+</li>
+<li>
+<p>This shows how this is done with CloudFlare DNS. Depending on your DNS provider this might be different. Consult the documentation for your provider. Note that Proxy must be turned off with CloudFlare.<br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.52.41%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>Back on EMS, click <code>Check again</code>. Note that sometimes it might take a while for your new DNS record to propagate. You can still continue, but functionality will be limited. Check back with the Hosts tab on <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a> and click <code>Rebuild Host</code> once the DNS record is in place.<br />
+<img src="images/Screen%20Shot%202020-07-31%20at%209.56.18%20AM.png" alt="" /></p>
+</li>
+<li>
+<p>You can also verify your CNAME DNS record using the command line</p>
+<ol>
+<li>
+<p>On Mac or Linux, using your <code>terminal</code></p>
+<pre><code>$ dig chat.twily.org CNAME
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; chat.twily.org CNAME
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 57888
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;chat.twily.org.			IN	CNAME
+
+;; ANSWER SECTION:
+chat.twily.org.		299	IN	CNAME	ems-custom-demo-staging.element.io.
+
+;; Query time: 32 msec
+;; SERVER: 8.8.4.4#53(8.8.4.4)
+;; WHEN: Fri Jul 31 10:21:56 BST 2020
+;; MSG SIZE  rcvd: 91
+</code></pre>
+</li>
+<li>
+<p>On Windows, using <code>PowerShell</code></p>
+<pre><code>PS C:\Users\twilight&gt; Resolve-DnsName -Name chat.twily.org -Type CNAME
+
+Name                           Type   TTL   Section    NameHost
+----                           ----   ---   -------    --------
+chat.twily.org                 CNAME  299   Answer     ems-custom-demo-staging.element.io
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Continue from step 11 on <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a></p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="get-your-own-ems-server"><a class="header" href="#get-your-own-ems-server">Get Your Own EMS Server</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<ol>
+<li>
+<p>Go to <a href="https://ems.element.io/">https://ems.element.io/</a></p>
+</li>
+<li>
+<p>Click &quot;Sign up or Sign in&quot;<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%2012.57.04%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Enter your email address<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%2012.58.03%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click the confirmation link in the email<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%2012.59.54%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Enter your name or company name and a password on <a href="https://ems.element.io/user/account">https://ems.element.io/user/account</a>. Then click <a href="https://ems.element.io/user/billing">Billing address and payment method</a>
+<img src="images/Screen%20Shot%202020-07-30%20at%202.13.48%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Enter your billing address and credit card information on <a href="https://ems.element.io/user/billing">https://ems.element.io/user/billing</a><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.15.49%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Your Account</code>, then <code>Manage Servers</code> to get started setting up your EMS server</p>
+</li>
+<li>
+<p>Click the <code>Setup</code> tab, and choose your Host Size<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.17.55%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Select your hostname and click Check. Keep in mind that this cannot be changed later<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.19.40%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Configure your host settings, then click Next. If you want to use Custom DNS (ie. have your usernames be <code>@someone:yourdomain.com</code> instead of <code>@someone:yourhost.ems.host</code> and have your Element client on your own domain), see <a href="EMS-Server-With-Custom-Domain.html">EMS-Server-With-Custom-Domain</a><br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.20.45%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Select Monthly or Annual billing and confirm your payment options. Then click Purchase<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.21.47%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Sit tight for a few minutes while your server is being built<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.23.01%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>When it's done. Click <code>Manage hosts</code> to configure additional settings and add users
+<img src="images/Screen%20Shot%202020-07-30%20at%202.25.37%20PM.png" alt="" /></p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="reset-user-password"><a class="header" href="#reset-user-password">Reset User Password</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<p>Resetting an account password will log out all sessions. Before doing this, make sure that</p>
+<ul>
+<li>all sessions are connected to key backup,</li>
+<li>all sessions have backed up all their keys. See <a href="Check-Status.html">Check-Status</a>, and</li>
+<li>the correct key backup passphrase available.</li>
+</ul>
+<br />
+<ol>
+<li>
+<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
+</li>
+<li>
+<p>Click <code>Server Admin</code>, select your host, then <code>Users</code></p>
+</li>
+<li>
+<p>Click the user you want to manage<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.45.40%20PM.png" alt="" /></p>
+</li>
+<li>
+<p>Click <code>Reset password</code>, enter a new password and click Go<br />
+<img src="images/Screen%20Shot%202020-07-30%20at%202.47.25%20PM.png" alt="" /></p>
+</li>
+</ol>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="migrate-from-self-hosted-to-ems"><a class="header" href="#migrate-from-self-hosted-to-ems">Migrate From Self Hosted to EMS</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<ul>
+<li>Except where specified, you should be able to just copy-paste each command in succession</li>
+<li>Please do not change any file names anywhere</li>
+</ul>
+<h2 id="ssh-to-your-matrix-server"><a class="header" href="#ssh-to-your-matrix-server">SSH to your matrix server</a></h2>
+<p>You might want to run everything in a <code>tmux</code> or <code>screen</code> session to avoid disruption in case of lost SSH connection</p>
+<h2 id="generate-password-for-gpg-encryption"><a class="header" href="#generate-password-for-gpg-encryption">Generate password for gpg encryption</a></h2>
+<pre><code class="language-bash">pwgen -s 64 1
+</code></pre>
+<p>Alternately, you can use our GPG key. Note, this expires on 2022-04-22, if this is soon, please talk to your EMS contact.<br />
+<a href="ems-support-public.pgp">ems-support-public.pgp</a></p>
+<h2 id="gpg"><a class="header" href="#gpg">GPG</a></h2>
+<p>If <code>gpg</code> is being uncooperative, use the command <code>gpgconf --kill gpg-agent</code></p>
+<h2 id="create-a-folder-to-store-everything"><a class="header" href="#create-a-folder-to-store-everything">Create a folder to store everything</a></h2>
+<pre><code class="language-bash">mkdir -p /tmp/synapse_export
+cd /tmp/synapse_export
+</code></pre>
+<p>The guide from here on assumes your current working directory is <code>/tmp/synapse_export</code></p>
+<h3 id="set-restrictive-permissions-on-the-folder"><a class="header" href="#set-restrictive-permissions-on-the-folder">Set restrictive permissions on the folder</a></h3>
+<p>If you are working as root: (otherwise set restrictive permissions as needed)</p>
+<pre><code class="language-bash">chmod 000 /tmp/synapse_export
+</code></pre>
+<h2 id="copy-synapse-config"><a class="header" href="#copy-synapse-config">Copy Synapse config</a></h2>
+<p>Copy the following files and send to EMS Support</p>
+<ul>
+<li>Your Synapse configuration file (usually <code>homeserver.yaml</code>)</li>
+<li>Your message signing key.
+<ul>
+<li>This is stored in a separate file. See the Synapse config file for the path. The variable is <code>signing_key_path</code> <a href="https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528">https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="stop-synapse"><a class="header" href="#stop-synapse">Stop Synapse</a></h2>
+<p><strong>DO NOT START IT AGAIN AFTER THIS</strong></p>
+<h2 id="database-export"><a class="header" href="#database-export">Database export</a></h2>
+<h3 id="postgresql"><a class="header" href="#postgresql">PostgreSQL</a></h3>
+<h4 id="dump-compress-and-encrypt"><a class="header" href="#dump-compress-and-encrypt">Dump, compress and encrypt</a></h4>
+<p>Replace</p>
+<ul>
+<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
+<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
+<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
+</ul>
+<pre><code class="language-bash">pg_dump -O -h &lt;dbhost&gt; -U &lt;dbusername&gt; -d &lt;dbname&gt; | gzip &gt; customer_db_export.sql.gz
+gpg --symmetric --no-symkey-cache customer_db_export.sql.gz
+rm customer_db_export.sql.gz
+</code></pre>
+<h4 id="if-required-split-into-smaller-files"><a class="header" href="#if-required-split-into-smaller-files">If required, split into smaller files</a></h4>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_db_export.sql.gz.gpg customer_db_export.sql.gz.gpg.part-
+rm customer_db_export.sql.gz.gpg
+</code></pre>
+<h3 id="sqlite"><a class="header" href="#sqlite">SQLIte</a></h3>
+<h4 id="compress-and-encrypt"><a class="header" href="#compress-and-encrypt">Compress and encrypt</a></h4>
+<pre><code class="language-bash">tar -zcvf homeserver.db.tar.gz /path/to/homeserver.db
+gpg --symmetric --no-symkey-cache homeserver.db.tar.gz
+rm homeserver.db.tar.gz
+</code></pre>
+<h4 id="if-required-split-into-smaller-files-1"><a class="header" href="#if-required-split-into-smaller-files-1">If required, split into smaller files</a></h4>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m homeserver.db.tar.gz homeserver.db.tar.gz.part-
+rm homeserver.db.tar.gz
+</code></pre>
+<h2 id="media-export"><a class="header" href="#media-export">Media export</a></h2>
+<h3 id="if-you-are-using-sqlite-as-database"><a class="header" href="#if-you-are-using-sqlite-as-database">If you are using SQLIte as database</a></h3>
+<p>Skip ahead to and follow <a href="Migrate-From-Self-Hosted-to-EMS.html#backup-media-export">Backup media export</a></p>
+<h3 id="download-the-export-tool"><a class="header" href="#download-the-export-tool">Download the export tool</a></h3>
+<p>Download the latest version of <code>export_synapse_for_import-linux-x64</code> (or <code> export_synapse_for_import-win-x64.exe</code>) from <a href="https://github.com/turt2live/matrix-media-repo/releases">https://github.com/turt2live/matrix-media-repo/releases</a></p>
+<pre><code class="language-bash">wget https://github.com/turt2live/matrix-media-repo/releases/download/vx.x.x/export_synapse_for_import-linux-x64
+chmod +x export_synapse_for_import-linux-x64
+</code></pre>
+<h3 id="run-the-export"><a class="header" href="#run-the-export">Run the export</a></h3>
+<p>Replace</p>
+<ul>
+<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
+<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
+<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
+<li><code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</li>
+<li><code>&lt;yourdomain.tld&gt;</code> (the domain for your server. this is the part that is in your usernames)</li>
+</ul>
+<pre><code class="language-bash">./export_synapse_for_import-linux-x64 -h
+./export_synapse_for_import-linux-x64 -dbHost &lt;dbhost&gt; -dbPort 5432 -dbName &lt;dbname&gt; -dbUsername &lt;dbusername&gt; -mediaDirectory /path/to/synapse/media_store -serverName &lt;yourdomain.tld&gt; -destination ./customer_media_export
+mv logs customer_media_export
+mv media-repo.yaml customer_media_export
+rm export_synapse_for_import-linux-x64
+</code></pre>
+<h3 id="compress-and-encrypt-1"><a class="header" href="#compress-and-encrypt-1">Compress and encrypt</a></h3>
+<pre><code class="language-bash">tar -zcvf customer_media_export.tar.gz customer_media_export
+gpg --symmetric --no-symkey-cache customer_media_export.tar.gz
+rm customer_media_export.tar.gz
+rm -r customer_media_export
+</code></pre>
+<h3 id="if-required-split-into-smaller-files-2"><a class="header" href="#if-required-split-into-smaller-files-2">If required, split into smaller files</a></h3>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_media_export.tar.gz.gpg customer_media_export.tar.gz.gpg.part-
+rm customer_media_export.tar.gz.gpg
+</code></pre>
+<h2 id="backup-media-export"><a class="header" href="#backup-media-export">Backup media export</a></h2>
+<h3 id="compress-and-encrypt-2"><a class="header" href="#compress-and-encrypt-2">Compress and encrypt</a></h3>
+<p>Replace * <code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</p>
+<pre><code class="language-bash">tar -zcvf customer_backup_media_export.tar.gz /path/to/synapse/media_store
+gpg --symmetric --no-symkey-cache customer_backup_media_export.tar.gz
+rm customer_backup_media_export.tar.gz
+</code></pre>
+<h3 id="if-required-split-into-smaller-files-3"><a class="header" href="#if-required-split-into-smaller-files-3">If required, split into smaller files</a></h3>
+<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
+<pre><code class="language-bash">split -b 100m customer_backup_media_export.tar.gz.gpg customer_backup_media_export.tar.gz.gpg.part-
+rm customer_backup_media_export.tar.gz.gpg
+</code></pre>
+<h2 id="transfer"><a class="header" href="#transfer">Transfer</a></h2>
+<p>Download the files, then upload to the Google Drive folder shared by EMS or a location as agreed with your EMS contact.</p>
+<p>While transfer is running, you should edit or create the well-known files and CNAME DNS records to point to your EMS host</p>
+<p>On your local computer</p>
+<pre><code class="language-bash">scp -r -P 1234 -i ~/.ssh/matrix-server youruser@1.2.3.4:/tmp/synapse_export /some/local/folder
+</code></pre>
+<h2 id="cleanup"><a class="header" href="#cleanup">Cleanup</a></h2>
+<p>We strongly recommend that you leave the export and Synapse untouched until the import is finished and everything is verified working</p>
+<h2 id="note-on-users-and-element"><a class="header" href="#note-on-users-and-element">Note on users and Element</a></h2>
+<p>Element does have support for changing the delegated homeserver URL. All your users will have to sign out and sign in again to Element. You should ensure everyone have Key Backup set configurd and working.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="add-email-to-your-account"><a class="header" href="#add-email-to-your-account">Add Email to Your Account</a></h1>
 <p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
 <ol>
@@ -992,501 +1487,6 @@ screen sharing does not work with the Element Desktop app</li>
 <p>Follow the steps from <a href="Reset-Cross-Signing.html#if-you-have-an-active-session">If you have an active session</a></p>
 </li>
 </ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="add-additional-users"><a class="header" href="#add-additional-users">Add Additional Users</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<ol>
-<li>
-<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
-</li>
-<li>
-<p>Click the <code>Hosts</code> tab</p>
-</li>
-<li>
-<p>Say you want a total of 10 Monthly Active Users on your EMS Nickel server. Add <code>5</code> in the <code>Additional users</code> field. Then click Save
-<img src="images/Screen%20Shot%202020-07-30%20at%202.28.57%20PM.png" alt="" />
-z</p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="add-users"><a class="header" href="#add-users">Add Users</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<ol>
-<li>
-<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
-</li>
-<li>
-<p>Click 'Server Admin'</p>
-</li>
-<li>
-<p>Select your host</p>
-</li>
-<li>
-<p>Click 'Add user'. Enter the username and click <code>Add</code><br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.34.01%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Select <code>Make new user server admin</code> if you want this user to be able to use the <a href="https://github.com/matrix-org/synapse/tree/master/docs/admin_api">Synapse Admin API</a> to perform administrative tasks on your server. Be careful with this as this option has a lot of power on your server</p>
-</li>
-<li>
-<p>The username and password for the new user is displayed. You will only be able to see this information once<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.37.05%20PM.png" alt="" /></p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="client-look-and-feel"><a class="header" href="#client-look-and-feel">Client Look and Feel</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<p>This feature allows you fo customize the home and welcome page on your EMS provided Element Web client.</p>
-<p>The guide assumes you already have a website on any domain with https enabled.</p>
-<ol>
-<li>
-<p>Create two files on your web server, for example <a href="https://twily.org/ems_home.html">https://twily.org/ems_home.html</a> and <a href="https://twily.org/ems_welcome.html">https://twily.org/ems_welcome.html</a><br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.01.00%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Edit <code>ems_home.html</code>. This can be as simple as a couple of lines of html, for example</p>
-<pre><code class="language-html">&lt;h1&gt;Demo Company LTD&lt;/h1&gt;
-&lt;h2&gt;Rooms to join&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href='/#/room/#welcome:ems-demo-staging.ems.host'&gt;Welcome to Demo web chat (#welcome)&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href='/#/room/#support:ems-demo-staging.ems.host'&gt;Support (#support)&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href='/#/room/#offtopic:ems-demo-staging.ems.host'&gt;Off topic conversation (#offtopic)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-<p>Or you can add a more complex html and styling</p>
-</li>
-<li>
-<p>Looks like this in browser:<br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.02.57%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Edit <code>ems_welcome.html</code>. This is a bit more complex, but can be almost anything you want as long as it has links to Login (/#/login) and 'Create account' (/#/register). The default design is based off <a href="https://github.com/vector-im/element-web/blob/master/res/welcome.html">this template</a>. You can get creative with the CSS and the <code>!important</code> tag.</p>
-</li>
-<li>
-<p>Add links to your files on the EMS control panel and click Save.<br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.21.45%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Check that it looks correct and that everything works. You do not need to click save or rebuild in the EMS control panel if you make changes to the files. As long as the URL does not change. Refreshing the Element Web Client page is enough.</p>
-</li>
-<li>
-<p>With some hacking you can make it look as you want. (and this is why I am a developer, not a designer...)<br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.37.18%20AM.png" alt="" /><br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.38.54%20AM.png" alt="" /><br />
-<img src="images/Screen%20Shot%202020-09-15%20at%2011.42.57%20AM.png" alt="" /></p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ems-server-with-custom-domain"><a class="header" href="#ems-server-with-custom-domain">Ems Server With Custom Domain</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<p>For this guide, I will be using the domain <a href="https://twily.org/">twily.org</a>. I will set up EMS so that the Matrix usernames becomes <code>@someone:twily.org</code>, and the Element client will be at <a href="https://chat.twily.org/">https://chat.twily.org/</a></p>
-<p>From the guide at <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a>, I will be replacing the EMS hostname <code>ems-demo-staging.ems.host</code> with <code>ems-custom-demo-staging.ems.host</code></p>
-<p>The guide assumes you already have a website on the root of your domain with https enabled.<br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.06.17%20AM.png" alt="" /></p>
-<ol>
-<li>
-<p>Follow step 1 - 10 from <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a></p>
-</li>
-<li>
-<p>On step 10 from <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a>, turn ON <code>Custom DNS</code><br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.07.59%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>In the <code>Custom Homeserver domain</code> field, enter <code>twily.org</code><br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.08.47%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Create two files on your website according to the instructions given.<br />
-The path cannot be changed, but up to 30 redirects are supported.<br />
-While not required, you should also add the header <code>Content-Type application/json</code> to both files.</p>
-<ol>
-<li>
-<p><code>https://twily.org/.well-known/matrix/server</code><br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.12.39%20AM.png" alt="" /></p>
-<pre><code class="language-json">{
-    &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
-}
-</code></pre>
-</li>
-<li>
-<p><code>https://twily.org/.well-known/matrix/client</code><br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.19.07%20AM.png" alt="" /><br />
-You need to enable the CORS header <code>Access-Control-Allow-Origin: *</code> on the web server for this file. See <a href="https://enable-cors.org/">https://enable-cors.org/</a> for instructions on how to do this.</p>
-<pre><code class="language-json">{
-    &quot;m.homeserver&quot;: {
-        &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
-    },
-    &quot;m.identity_server&quot;: {
-        &quot;base_url&quot;: &quot;https://vector.im&quot;
-    }
-}
-</code></pre>
-</li>
-</ol>
-</li>
-<li>
-<p>Click <code>Check again</code> to verify that your <code>.well-known</code> files are configured correctly<br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.22.19%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>You can also verify your <code>.well-known</code> files from the command line. Note the lines <code>access-control-allow-origin: *</code> and <code>content-type: application/json</code></p>
-<ol>
-<li>
-<p>On Mac or Linux, using your <code>terminal</code></p>
-<pre><code>$ curl -i https://twily.org/.well-known/matrix/client
-HTTP/2 200 
-date: Fri, 31 Jul 2020 09:11:21 GMT
-content-type: application/json
-content-length: 129
-set-cookie: __cfduid=x...; expires=Sun, 30-Aug-20 09:11:21 GMT; path=/; domain=.twily.org; HttpOnly; SameSite=Lax
-access-control-allow-origin: *
-cf-cache-status: DYNAMIC
-cf-request-id: 0...
-expect-ct: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-server: cloudflare
-cf-ray: 5...
-
-{
-    &quot;m.homeserver&quot;: {
-        &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
-    },
-    &quot;m.identity_server&quot;: {
-        &quot;base_url&quot;: &quot;https://vector.im&quot;
-    }
-}
-
-$ curl -i https://twily.org/.well-known/matrix/server
-HTTP/2 200 
-date: Fri, 31 Jul 2020 09:11:25 GMT
-content-type: application/json
-content-length: 52
-set-cookie: __cfduid=x...; expires=Sun, 30-Aug-20 09:11:25 GMT; path=/; domain=.twily.org; HttpOnly; SameSite=Lax
-access-control-allow-origin: *
-cf-cache-status: DYNAMIC
-cf-request-id: 0...
-expect-ct: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-server: cloudflare
-cf-ray: 5...
-
-{
-    &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
-}   
-</code></pre>
-</li>
-<li>
-<p>On Windows, using <code>PowerShell</code></p>
-<pre><code>PS C:\Users\twilight&gt; Invoke-WebRequest -Uri https://twily.org/.well-known/matrix/client
-
-
-StatusCode        : 200
-StatusDescription : OK
-Content           : {
-                        &quot;m.homeserver&quot;: {
-                            &quot;base_url&quot;: &quot;https://ems-custom-demo-staging.ems.host&quot;
-                        },
-                        &quot;m.identity_server&quot;: {
-                            &quot;base_url&quot;: &quot;https://vector.im&quot;
-                        }
-                    }
-RawContent        : HTTP/1.1 200 OK
-                    Connection: keep-alive
-                    Access-Control-Allow-Origin: *
-                    CF-Cache-Status: DYNAMIC
-                    cf-request-id: 0...
-                    Expect-CT: max-age=604800, report-uri=&quot;https://repor...
-Forms             : {}
-Headers           : {[Connection, keep-alive], [Access-Control-Allow-Origin, *], [CF-Cache-Status, DYNAMIC], [cf-request-id, 0...]...}
-Images            : {}
-InputFields       : {}
-Links             : {}
-ParsedHtml        : System.__ComObject
-RawContentLength  : 129
-
-
-PS C:\Users\twilight&gt; Invoke-WebRequest -Uri https://twily.org/.well-known/matrix/server
-
-
-StatusCode        : 200
-StatusDescription : OK
-Content           : {
-                        &quot;m.server&quot;: &quot;ems-custom-demo-staging.ems.host:443&quot;
-                    }
-RawContent        : HTTP/1.1 200 OK
-                    Connection: keep-alive
-                    Access-Control-Allow-Origin: *
-                    CF-Cache-Status: DYNAMIC
-                    cf-request-id: 0...
-                    Expect-CT: max-age=604800, report-uri=&quot;https://repor...
-Forms             : {}
-Headers           : {[Connection, keep-alive], [Access-Control-Allow-Origin, *], [CF-Cache-Status, DYNAMIC], [cf-request-id, 0...]...}
-Images            : {}
-InputFields       : {}
-Links             : {}
-ParsedHtml        : System.__ComObject
-RawContentLength  : 52
-</code></pre>
-</li>
-</ol>
-</li>
-<li>
-<p>You can continue without the <code>.well-known</code> files in place, but your server will have limited functionality until this is fixed</p>
-</li>
-<li>
-<p>In the <code>Custom Client domain</code> field, enter <code>chat.twily.org</code>. This can be any domain, except the same as <code>Custom Homeserver domain</code><br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.26.35%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Create a CNAME DNS record with your DNS provider according to the instructions given<br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.51.37%20AM.png" alt="" /><br />
-<code>chat.twily.org.  CNAME  ems-custom-demo-staging.element.io.</code></p>
-</li>
-<li>
-<p>This shows how this is done with CloudFlare DNS. Depending on your DNS provider this might be different. Consult the documentation for your provider. Note that Proxy must be turned off with CloudFlare.<br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.52.41%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>Back on EMS, click <code>Check again</code>. Note that sometimes it might take a while for your new DNS record to propagate. You can still continue, but functionality will be limited. Check back with the Hosts tab on <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a> and click <code>Rebuild Host</code> once the DNS record is in place.<br />
-<img src="images/Screen%20Shot%202020-07-31%20at%209.56.18%20AM.png" alt="" /></p>
-</li>
-<li>
-<p>You can also verify your CNAME DNS record using the command line</p>
-<ol>
-<li>
-<p>On Mac or Linux, using your <code>terminal</code></p>
-<pre><code>$ dig chat.twily.org CNAME
-
-; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; chat.twily.org CNAME
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 57888
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; QUESTION SECTION:
-;chat.twily.org.			IN	CNAME
-
-;; ANSWER SECTION:
-chat.twily.org.		299	IN	CNAME	ems-custom-demo-staging.element.io.
-
-;; Query time: 32 msec
-;; SERVER: 8.8.4.4#53(8.8.4.4)
-;; WHEN: Fri Jul 31 10:21:56 BST 2020
-;; MSG SIZE  rcvd: 91
-</code></pre>
-</li>
-<li>
-<p>On Windows, using <code>PowerShell</code></p>
-<pre><code>PS C:\Users\twilight&gt; Resolve-DnsName -Name chat.twily.org -Type CNAME
-
-Name                           Type   TTL   Section    NameHost
-----                           ----   ---   -------    --------
-chat.twily.org                 CNAME  299   Answer     ems-custom-demo-staging.element.io
-</code></pre>
-</li>
-</ol>
-</li>
-<li>
-<p>Continue from step 11 on <a href="Get-Your-Own-EMS-Server.html">Get-Your-Own-EMS-Server</a></p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="get-your-own-ems-server"><a class="header" href="#get-your-own-ems-server">Get Your Own EMS Server</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<ol>
-<li>
-<p>Go to <a href="https://ems.element.io/">https://ems.element.io/</a></p>
-</li>
-<li>
-<p>Click &quot;Sign up or Sign in&quot;<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%2012.57.04%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Enter your email address<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%2012.58.03%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Click the confirmation link in the email<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%2012.59.54%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Enter your name or company name and a password on <a href="https://ems.element.io/user/account">https://ems.element.io/user/account</a>. Then click <a href="https://ems.element.io/user/billing">Billing address and payment method</a>
-<img src="images/Screen%20Shot%202020-07-30%20at%202.13.48%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Enter your billing address and credit card information on <a href="https://ems.element.io/user/billing">https://ems.element.io/user/billing</a><br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.15.49%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Click <code>Your Account</code>, then <code>Manage Servers</code> to get started setting up your EMS server</p>
-</li>
-<li>
-<p>Click the <code>Setup</code> tab, and choose your Host Size<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.17.55%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Select your hostname and click Check. Keep in mind that this cannot be changed later<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.19.40%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Configure your host settings, then click Next. If you want to use Custom DNS (ie. have your usernames be <code>@someone:yourdomain.com</code> instead of <code>@someone:yourhost.ems.host</code> and have your Element client on your own domain), see <a href="EMS-Server-With-Custom-Domain.html">EMS-Server-With-Custom-Domain</a><br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.20.45%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Select Monthly or Annual billing and confirm your payment options. Then click Purchase<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.21.47%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Sit tight for a few minutes while your server is being built<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.23.01%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>When it's done. Click <code>Manage hosts</code> to configure additional settings and add users
-<img src="images/Screen%20Shot%202020-07-30%20at%202.25.37%20PM.png" alt="" /></p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="reset-user-password"><a class="header" href="#reset-user-password">Reset User Password</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<p>Resetting an account password will log out all sessions. Before doing this, make sure that</p>
-<ul>
-<li>all sessions are connected to key backup,</li>
-<li>all sessions have backed up all their keys. See <a href="Check-Status.html">Check-Status</a>, and</li>
-<li>the correct key backup passphrase available.</li>
-</ul>
-<br />
-<ol>
-<li>
-<p>Click <code>Your Account</code> and <code>Manage Servers</code> or click this link <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a></p>
-</li>
-<li>
-<p>Click <code>Server Admin</code>, select your host, then <code>Users</code></p>
-</li>
-<li>
-<p>Click the user you want to manage<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.45.40%20PM.png" alt="" /></p>
-</li>
-<li>
-<p>Click <code>Reset password</code>, enter a new password and click Go<br />
-<img src="images/Screen%20Shot%202020-07-30%20at%202.47.25%20PM.png" alt="" /></p>
-</li>
-</ol>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="migrate-from-self-hosted-to-ems"><a class="header" href="#migrate-from-self-hosted-to-ems">Migrate From Self Hosted to EMS</a></h1>
-<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
-<ul>
-<li>Except where specified, you should be able to just copy-paste each command in succession</li>
-<li>Please do not change any file names anywhere</li>
-</ul>
-<h2 id="ssh-to-your-matrix-server"><a class="header" href="#ssh-to-your-matrix-server">SSH to your matrix server</a></h2>
-<p>You might want to run everything in a <code>tmux</code> or <code>screen</code> session to avoid disruption in case of lost SSH connection</p>
-<h2 id="generate-password-for-gpg-encryption"><a class="header" href="#generate-password-for-gpg-encryption">Generate password for gpg encryption</a></h2>
-<pre><code class="language-bash">pwgen -s 64 1
-</code></pre>
-<p>Alternately, you can use our GPG key. Note, this expires on 2022-04-22, if this is soon, please talk to your EMS contact.<br />
-<a href="ems-support-public.pgp">ems-support-public.pgp</a></p>
-<h2 id="gpg"><a class="header" href="#gpg">GPG</a></h2>
-<p>If <code>gpg</code> is being uncooperative, use the command <code>gpgconf --kill gpg-agent</code></p>
-<h2 id="create-a-folder-to-store-everything"><a class="header" href="#create-a-folder-to-store-everything">Create a folder to store everything</a></h2>
-<pre><code class="language-bash">mkdir -p /tmp/synapse_export
-cd /tmp/synapse_export
-</code></pre>
-<p>The guide from here on assumes your current working directory is <code>/tmp/synapse_export</code></p>
-<h3 id="set-restrictive-permissions-on-the-folder"><a class="header" href="#set-restrictive-permissions-on-the-folder">Set restrictive permissions on the folder</a></h3>
-<p>If you are working as root: (otherwise set restrictive permissions as needed)</p>
-<pre><code class="language-bash">chmod 000 /tmp/synapse_export
-</code></pre>
-<h2 id="copy-synapse-config"><a class="header" href="#copy-synapse-config">Copy Synapse config</a></h2>
-<p>Copy the following files and send to EMS Support</p>
-<ul>
-<li>Your Synapse configuration file (usually <code>homeserver.yaml</code>)</li>
-<li>Your message signing key.
-<ul>
-<li>This is stored in a separate file. See the Synapse config file for the path. The variable is <code>signing_key_path</code> <a href="https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528">https://github.com/matrix-org/synapse/blob/v1.32.2/docs/sample_config.yaml#L1526-L1528</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="stop-synapse"><a class="header" href="#stop-synapse">Stop Synapse</a></h2>
-<p><strong>DO NOT START IT AGAIN AFTER THIS</strong></p>
-<h2 id="database-export"><a class="header" href="#database-export">Database export</a></h2>
-<h3 id="postgresql"><a class="header" href="#postgresql">PostgreSQL</a></h3>
-<h4 id="dump-compress-and-encrypt"><a class="header" href="#dump-compress-and-encrypt">Dump, compress and encrypt</a></h4>
-<p>Replace</p>
-<ul>
-<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
-<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
-<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
-</ul>
-<pre><code class="language-bash">pg_dump -O -h &lt;dbhost&gt; -U &lt;dbusername&gt; -d &lt;dbname&gt; | gzip &gt; customer_db_export.sql.gz
-gpg --symmetric --no-symkey-cache customer_db_export.sql.gz
-rm customer_db_export.sql.gz
-</code></pre>
-<h4 id="if-required-split-into-smaller-files"><a class="header" href="#if-required-split-into-smaller-files">If required, split into smaller files</a></h4>
-<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
-<pre><code class="language-bash">split -b 100m customer_db_export.sql.gz.gpg customer_db_export.sql.gz.gpg.part-
-rm customer_db_export.sql.gz.gpg
-</code></pre>
-<h3 id="sqlite"><a class="header" href="#sqlite">SQLIte</a></h3>
-<h4 id="compress-and-encrypt"><a class="header" href="#compress-and-encrypt">Compress and encrypt</a></h4>
-<pre><code class="language-bash">tar -zcvf homeserver.db.tar.gz /path/to/homeserver.db
-gpg --symmetric --no-symkey-cache homeserver.db.tar.gz
-rm homeserver.db.tar.gz
-</code></pre>
-<h4 id="if-required-split-into-smaller-files-1"><a class="header" href="#if-required-split-into-smaller-files-1">If required, split into smaller files</a></h4>
-<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
-<pre><code class="language-bash">split -b 100m homeserver.db.tar.gz homeserver.db.tar.gz.part-
-rm homeserver.db.tar.gz
-</code></pre>
-<h2 id="media-export"><a class="header" href="#media-export">Media export</a></h2>
-<h3 id="if-you-are-using-sqlite-as-database"><a class="header" href="#if-you-are-using-sqlite-as-database">If you are using SQLIte as database</a></h3>
-<p>Skip ahead to and follow <a href="Migrate-From-Self-Hosted-to-EMS.html#backup-media-export">Backup media export</a></p>
-<h3 id="download-the-export-tool"><a class="header" href="#download-the-export-tool">Download the export tool</a></h3>
-<p>Download the latest version of <code>export_synapse_for_import-linux-x64</code> (or <code> export_synapse_for_import-win-x64.exe</code>) from <a href="https://github.com/turt2live/matrix-media-repo/releases">https://github.com/turt2live/matrix-media-repo/releases</a></p>
-<pre><code class="language-bash">wget https://github.com/turt2live/matrix-media-repo/releases/download/vx.x.x/export_synapse_for_import-linux-x64
-chmod +x export_synapse_for_import-linux-x64
-</code></pre>
-<h3 id="run-the-export"><a class="header" href="#run-the-export">Run the export</a></h3>
-<p>Replace</p>
-<ul>
-<li><code>&lt;dbhost&gt;</code> (ip or fqdn for your database server)</li>
-<li><code>&lt;dbname&gt;</code> (the name of the database for synapse)</li>
-<li><code>&lt;dbusername&gt;</code> (username for your synapse database)</li>
-<li><code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</li>
-<li><code>&lt;yourdomain.tld&gt;</code> (the domain for your server. this is the part that is in your usernames)</li>
-</ul>
-<pre><code class="language-bash">./export_synapse_for_import-linux-x64 -h
-./export_synapse_for_import-linux-x64 -dbHost &lt;dbhost&gt; -dbPort 5432 -dbName &lt;dbname&gt; -dbUsername &lt;dbusername&gt; -mediaDirectory /path/to/synapse/media_store -serverName &lt;yourdomain.tld&gt; -destination ./customer_media_export
-mv logs customer_media_export
-mv media-repo.yaml customer_media_export
-rm export_synapse_for_import-linux-x64
-</code></pre>
-<h3 id="compress-and-encrypt-1"><a class="header" href="#compress-and-encrypt-1">Compress and encrypt</a></h3>
-<pre><code class="language-bash">tar -zcvf customer_media_export.tar.gz customer_media_export
-gpg --symmetric --no-symkey-cache customer_media_export.tar.gz
-rm customer_media_export.tar.gz
-rm -r customer_media_export
-</code></pre>
-<h3 id="if-required-split-into-smaller-files-2"><a class="header" href="#if-required-split-into-smaller-files-2">If required, split into smaller files</a></h3>
-<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
-<pre><code class="language-bash">split -b 100m customer_media_export.tar.gz.gpg customer_media_export.tar.gz.gpg.part-
-rm customer_media_export.tar.gz.gpg
-</code></pre>
-<h2 id="backup-media-export"><a class="header" href="#backup-media-export">Backup media export</a></h2>
-<h3 id="compress-and-encrypt-2"><a class="header" href="#compress-and-encrypt-2">Compress and encrypt</a></h3>
-<p>Replace * <code>/path/to/synapse/media_store</code> (the path to where synapse stores your media)</p>
-<pre><code class="language-bash">tar -zcvf customer_backup_media_export.tar.gz /path/to/synapse/media_store
-gpg --symmetric --no-symkey-cache customer_backup_media_export.tar.gz
-rm customer_backup_media_export.tar.gz
-</code></pre>
-<h3 id="if-required-split-into-smaller-files-3"><a class="header" href="#if-required-split-into-smaller-files-3">If required, split into smaller files</a></h3>
-<p>Please only do this if you have a slow connection and is worried about transferring a single large file</p>
-<pre><code class="language-bash">split -b 100m customer_backup_media_export.tar.gz.gpg customer_backup_media_export.tar.gz.gpg.part-
-rm customer_backup_media_export.tar.gz.gpg
-</code></pre>
-<h2 id="transfer"><a class="header" href="#transfer">Transfer</a></h2>
-<p>Download the files, then upload to the Google Drive folder shared by EMS or a location as agreed with your EMS contact.</p>
-<p>While transfer is running, you should edit or create the well-known files and CNAME DNS records to point to your EMS host</p>
-<p>On your local computer</p>
-<pre><code class="language-bash">scp -r -P 1234 -i ~/.ssh/matrix-server youruser@1.2.3.4:/tmp/synapse_export /some/local/folder
-</code></pre>
-<h2 id="cleanup"><a class="header" href="#cleanup">Cleanup</a></h2>
-<p>We strongly recommend that you leave the export and Synapse untouched until the import is finished and everything is verified working</p>
-<h2 id="note-on-users-and-element"><a class="header" href="#note-on-users-and-element">Note on users and Element</a></h2>
-<p>Element does have support for changing the delegated homeserver URL. All your users will have to sign out and sign in again to Element. You should ensure everyone have Key Backup set configurd and working.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="contribute"><a class="header" href="#contribute">Contribute</a></h1>
 <ol>
 <li>Fork the <a href="https://github.com/Twi1ightSparkle/matrix-documentation">GitHib repo</a></li>
