@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Element Wiki</a></li><li class="chapter-item expanded affix "><a href="Frequently-Asked-Questions.html">Frequently Asked Questions</a></li><li class="chapter-item expanded affix "><li class="part-title">Element Matrix Services</li><li class="chapter-item expanded "><a href="Add-Additional-Users.html">Add Additional Users</a></li><li class="chapter-item expanded "><a href="Add-Users.html">Add Users</a></li><li class="chapter-item expanded "><a href="Client-Look-and-Feel.html">Client Look &amp; Feel</a></li><li class="chapter-item expanded "><a href="EMS-Server-With-Custom-Domain.html">EMS Server With Custom Domain</a></li><li class="chapter-item expanded "><a href="Get-Your-Own-EMS-Server.html">Get Your Own EMS Server</a></li><li class="chapter-item expanded "><a href="Reset-User-Password.html">Reset User Password</a></li><li class="chapter-item expanded "><a href="Migrate-From-Self-Hosted-to-EMS.html">Migrate From Self-Hosted to EMS</a></li><li class="chapter-item expanded affix "><li class="part-title">Element</li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html">Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html">Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html">Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html">Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html">Submit Debug Logs</a></li><li class="chapter-item expanded affix "><li class="part-title">Cross Signing</li><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html">Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html">Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html">Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html">Reset Cross Signing</a></li><li class="chapter-item expanded affix "><li class="part-title">Contribute</li><li class="chapter-item expanded "><a href="Contribute.html">Contribute</a></li><li class="chapter-item expanded affix "><li class="part-title">Non-English</li><li class="chapter-item expanded "><a href="Nutzung-der-eigenen-Domain-mit-EMS.html">Deutsch: Nutzung der eigenen Domain mit EMS</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Element Wiki</a></li><li class="chapter-item expanded affix "><a href="Frequently-Asked-Questions.html">Frequently Asked Questions</a></li><li class="chapter-item expanded affix "><li class="part-title">Element Matrix Services</li><li class="chapter-item expanded "><a href="Add-Additional-Users.html">Add Additional Users</a></li><li class="chapter-item expanded "><a href="Add-Users.html">Add Users</a></li><li class="chapter-item expanded "><a href="Client-Look-and-Feel.html">Client Look &amp; Feel</a></li><li class="chapter-item expanded "><a href="EMS-Server-With-Custom-Domain.html">EMS Server With Custom Domain</a></li><li class="chapter-item expanded "><a href="Get-Your-Own-EMS-Server.html">Get Your Own EMS Server</a></li><li class="chapter-item expanded "><a href="Reset-User-Password.html">Reset User Password</a></li><li class="chapter-item expanded "><a href="Migrate-From-Self-Hosted-to-EMS.html">Migrate From Self-Hosted to EMS</a></li><li class="chapter-item expanded affix "><li class="part-title">Element</li><li class="chapter-item expanded "><a href="Add-Email-to-Your-Account.html">Add Email to Your Account</a></li><li class="chapter-item expanded "><a href="Add-WhatsApp-Bridge.html">Add WhatsApp Bridge</a></li><li class="chapter-item expanded "><a href="Add-Free-Slack-Bridge.html">Add Free Slack Bridge</a></li><li class="chapter-item expanded "><a href="Change-Account-Password.html">Change Account Password</a></li><li class="chapter-item expanded "><a href="Create-a-Conference-Call-in-a-Room.html">Create a Conference Call in a Room</a></li><li class="chapter-item expanded "><a href="Submit-Debug-Logs.html">Submit Debug Logs</a></li><li class="chapter-item expanded affix "><li class="part-title">Cross Signing</li><li class="chapter-item expanded "><a href="Set-up-Cross-Signing.html">Set up Cross Signing</a></li><li class="chapter-item expanded "><a href="Check-Status.html">Check Status</a></li><li class="chapter-item expanded "><a href="Export-and-Import-E2E-Room-Keys.html">Export and Import E2E Room Keys</a></li><li class="chapter-item expanded "><a href="Reset-Cross-Signing.html">Reset Cross Signing</a></li><li class="chapter-item expanded affix "><li class="part-title">Contribute</li><li class="chapter-item expanded "><a href="Contribute.html">Contribute</a></li><li class="chapter-item expanded affix "><li class="part-title">Non-English</li><li class="chapter-item expanded "><a href="Nutzung-der-eigenen-Domain-mit-EMS.html">Deutsch: Nutzung der eigenen Domain mit EMS</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -805,6 +805,51 @@ rm customer_backup_media_export.tar.gz.gpg
 <p>If all worked correctly, your new email should now show up under the <code>Email addresses</code> section in Element settings. If not, something went wrong and you need to try again<br />
 <img src="images/Screen%20Shot%202020-10-20%20at%2012.02.17%20PM.png" alt="" /></p>
 </li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="add-a-whatsapp-bridge"><a class="header" href="#add-a-whatsapp-bridge">Add a WhatsApp Bridge</a></h1>
+<p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
+<p>This guide explains how to use the <code>WhatsApp</code> bridge from the EMS Integration Manager to integrate your <code>WhatsApp</code> chats with your EMS server.</p>
+<p>It requires your EMS server to have federation on.</p>
+<p>The following instructions are done with the  Element Desktop on the Element side and on Element iOS for the <code>WhatsApp</code> side. Element Android should be almost identical to Element Web.</p>
+<h2 id="purchase--the-whatsapp-integration"><a class="header" href="#purchase--the-whatsapp-integration">Purchase  the WhatsApp integration</a></h2>
+<ol>
+<li>
+<p>Open the EMS control panel at: <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a><br />
+Click the <code>Integrations</code> tab  and if you have more than one server, select the server you wish to add the <code>WhatsApp</code> integration to
+<img src="images/click-integration-tab-ems-user-hosting.png" alt="" /></p>
+</li>
+<li>
+<p>Choose <code>WhatsApp</code> from the list of available Bridges
+<img src="images/wa-matrix-choose-bridge.png" alt="" /></p>
+</li>
+<li>
+<p>Enter the maxium number of users in <code>Maximum WhatsApp users</code> e.g. <code>20</code> and then click <code>Purchase</code><br />
+<img src="images/wa-enter-number-users-click-purchase.png" alt="" /></p>
+</li>
+<li>
+<p>A dialogue will remind you of the price per user and ask if you wish to proceed. Click <code>Purchase</code> if you wish to proceed with the <code>WhatsApp</code> Integration<br />
+<img src="images/wa-confirm-subscription-click-purchase.png" alt="" /></p>
+</li>
+<li>
+<p>You will have to wait a few minutes while your host is reprovisioned with the <code>WhatsApp</code> bridge. 
+Once reprovisioning is finished, you be able to bridge <code>WhatsApp</code> to your EMS server using your Element client.</p>
+</li>
+</ol>
+<h2 id="bridge-whatsapp-to-your-ems-server"><a class="header" href="#bridge-whatsapp-to-your-ems-server">Bridge WhatsApp to your EMS server</a></h2>
+<ol>
+<li>Once the bridge is running, open your Element app. Click on the <code>+</code> next to <code>People</code><br />
+<img src="images/start-chat.png" alt="" /></li>
+<li>Create a Direct Message conversation by typing <code>@whatsappbot:example.ems.host</code> (replace the domain with the one of your homeserver). Then click<code>Go</code> 
+<img src="images/dm-wa-bot.png" alt="" /></li>
+<li>The bridge account will join your room and tell you how to use it
+<img src="images/wabridge-bot-joins-room.png" alt="" /></li>
+<li>Open <code>WhatsApp</code> on your mobile device (iOS or Android) and go to <code>Settings</code> and then <code>Linked Devices</code> and then <code>Link a Device</code> and tap <code>OK</code> to start the <code>WhatsApp</code> QR code scanner. You will use this QR code scanner to scan a QR code displayed by your Element client in the next step<br />
+<img src="images/wabridge-whatsapp-ios-qrcode.png" alt="" /></li>
+<li>From your Element client, send a <code>login</code> message to the bot to connect to your <code>WhatsApp</code> account<br />
+<img src="images/wabridge-send-login-message.png" alt="" /></li>
+<li>A QR code will be displayed. Quickly scan the QR code with <code>WhatsApp</code> on your mobile device. You have about a minute before it times out. If it times out, just send the login message again to generate another QR code<br />
+<img src="images/wabridge-qr-code-from-login-command.png" alt="" /></li>
+<li>On your Element client, you will see <code>Successfully logged in, synchronizing chats...</code> and you will see invitations for each of your <code>WhatsApp</code> chats in your Element client. Each <code>WhatsApp</code> chat is a separate Matrix room. Join one or more chats and start chatting from either your Element app on desktop, iOS or Android or your <code>WhatsApp</code> on mobile.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="add-free-slack-bridge"><a class="header" href="#add-free-slack-bridge">Add Free Slack Bridge</a></h1>
 <p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
