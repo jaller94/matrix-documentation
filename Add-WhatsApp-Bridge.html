@@ -160,31 +160,36 @@
 
                         <h1 id="add-a-whatsapp-bridge"><a class="header" href="#add-a-whatsapp-bridge">Add a WhatsApp Bridge</a></h1>
 <p>This article is licensed under the standard MIT license. See <a href="index.html">Home</a> for a full copy.</p>
-<p>This guide explains how to use the <code>WhatsApp</code> bridge from the EMS Integration Manager to integrate your <code>WhatsApp</code> chats with your EMS server.</p>
+<p>This guide explains how to use the WhatsApp bridge from the EMS Integration Manager to integrate your WhatsApp chats with your EMS server.</p>
 <p>It requires your EMS server to have federation on.</p>
-<p>The following instructions are done with the  Element Desktop on the Element side and on Element iOS for the <code>WhatsApp</code> side. Element Android should be almost identical to Element Web.</p>
+<p>The following instructions are done with the  Element Desktop on the Element side and on Element iOS for the WhatsApp side. Element Android should be almost identical to Element Web.</p>
 <h2 id="purchase--the-whatsapp-integration"><a class="header" href="#purchase--the-whatsapp-integration">Purchase  the WhatsApp integration</a></h2>
 <ol>
 <li>
 <p>Open the EMS control panel at: <a href="https://ems.element.io/user/hosting">https://ems.element.io/user/hosting</a><br />
-Click the <code>Integrations</code> tab  and if you have more than one server, select the server you wish to add the <code>WhatsApp</code> integration to
+Click the <code>Integrations</code> tab  and if you have more than one server, select the server you wish to add the WhatsApp integration to
 <img src="images/click-integration-tab-ems-user-hosting.png" alt="" /></p>
 </li>
 <li>
-<p>Choose <code>WhatsApp</code> from the list of available Bridges
+<p>Click on <code>WhatsApp Bridge</code> in the list of available Bridges
 <img src="images/wa-matrix-choose-bridge.png" alt="" /></p>
 </li>
 <li>
-<p>Enter the maxium number of users in <code>Maximum WhatsApp users</code> e.g. <code>20</code> and then click <code>Purchase</code><br />
-<img src="images/wa-enter-number-users-click-purchase.png" alt="" /></p>
+<p>Enter the maximum number of users in <code>Maximum WhatsApp users</code>.<br />
+Please note:  <strong>this is the maximum number of WhatsApp users who actually send messages over the bridge each month. You are only billed for the number of WhatsApp users who are active. Once you exceed the maximum, then the bridge will be disabled until you increase the maximum.</strong><br />
+If you enter less than <code>5</code>, you will get a warning<br />
+<img src="images/wa-low-rmau-warning.png" alt="" /><br />
+If you enter <code>5</code> or greater in <code>Maximum WhatsApp users</code>, you will not see a warning<br />
+<img src="images/wa-enter-number-users-click-purchase.png" alt="" /><br />
+Once you have entered <code>Maximum WhatsApp users</code>, click <code>Purchase</code> (remember you can always go back to this step and increase the maximum number of WhatsApp users if you need more in the future).</p>
 </li>
 <li>
-<p>A dialogue will remind you of the price per user and ask if you wish to proceed. Click <code>Purchase</code> if you wish to proceed with the <code>WhatsApp</code> Integration<br />
+<p>A dialogue will remind you of the price per user and ask if you wish to proceed. Click <code>Purchase</code> if you wish to proceed with the WhatsApp Integration<br />
 <img src="images/wa-confirm-subscription-click-purchase.png" alt="" /></p>
 </li>
 <li>
-<p>You will have to wait a few minutes while your host is reprovisioned with the <code>WhatsApp</code> bridge. 
-Once reprovisioning is finished, you be able to bridge <code>WhatsApp</code> to your EMS server using your Element client.</p>
+<p>You will have to wait a few minutes while your host is reprovisioned with the WhatsApp bridge. 
+Once reprovisioning is finished, you be able to bridge WhatsApp to your EMS server using your Element client.</p>
 </li>
 </ol>
 <h2 id="bridge-whatsapp-to-your-ems-server"><a class="header" href="#bridge-whatsapp-to-your-ems-server">Bridge WhatsApp to your EMS server</a></h2>
@@ -195,13 +200,13 @@ Once reprovisioning is finished, you be able to bridge <code>WhatsApp</code> to 
 <img src="images/dm-wa-bot.png" alt="" /></li>
 <li>The bridge account will join your room and tell you how to use it
 <img src="images/wabridge-bot-joins-room.png" alt="" /></li>
-<li>Open <code>WhatsApp</code> on your mobile device (iOS or Android) and go to <code>Settings</code> and then <code>Linked Devices</code> and then <code>Link a Device</code> and tap <code>OK</code> to start the <code>WhatsApp</code> QR code scanner. You will use this QR code scanner to scan a QR code displayed by your Element client in the next step<br />
+<li>Open WhatsApp on your mobile device (iOS or Android) and go to <code>Settings</code> and then <code>Linked Devices</code> and then <code>Link a Device</code> and tap <code>OK</code> to start the WhatsApp QR code scanner. You will use this QR code scanner to scan a QR code displayed by your Element client in the next step<br />
 <img src="images/wabridge-whatsapp-ios-qrcode.png" alt="" /></li>
-<li>From your Element client, send a <code>login</code> message to the bot to connect to your <code>WhatsApp</code> account<br />
+<li>From your Element client, send a <code>login</code> message to the bot to connect to your WhatsApp account<br />
 <img src="images/wabridge-send-login-message.png" alt="" /></li>
-<li>A QR code will be displayed. Quickly scan the QR code with <code>WhatsApp</code> on your mobile device. You have about a minute before it times out. If it times out, just send the login message again to generate another QR code<br />
+<li>A QR code will be displayed. Quickly scan the QR code with WhatsApp on your mobile device. You have about a minute before it times out. If it times out, just send the login message again to generate another QR code<br />
 <img src="images/wabridge-qr-code-from-login-command.png" alt="" /></li>
-<li>On your Element client, you will see <code>Successfully logged in, synchronizing chats...</code> and you will see invitations for each of your <code>WhatsApp</code> chats in your Element client. Each <code>WhatsApp</code> chat is a separate Matrix room. Join one or more chats and start chatting from either your Element app on desktop, iOS or Android or your <code>WhatsApp</code> on mobile.</li>
+<li>On your Element client, you will see <code>Successfully logged in, synchronizing chats...</code> and you will see invitations for each of your WhatsApp chats in your Element client. Each WhatsApp chat is a separate Matrix room. Join one or more chats and start chatting from either your Element app on desktop, iOS or Android or your WhatsApp on mobile.</li>
 </ol>
 
                     </main>
